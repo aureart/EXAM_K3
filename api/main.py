@@ -7,7 +7,7 @@ import os
 server = FastAPI(title='User API')
 
 # creating a connection to the database
-mysql_url = 'my-service-eval'  # to complete
+mysql_url = 'my-service-eval'  # from service
 mysql_user = 'root'
 mysql_password = os.environ.get('MYSQL_ROOT_PASSWORD')  # nom de la vriable d'env d'apres le deployment
 database_name = 'Main'
