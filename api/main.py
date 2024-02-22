@@ -9,8 +9,13 @@ server = FastAPI(title='User API')
 # creating a connection to the database
 mysql_url = 'my-service-eval'  # from service
 mysql_user = 'root'
-mysql_password = os.environ.get('MYSQL_ROOT_PASSWORD')  # nom de la vriable d'env d'apres le deployment
 database_name = 'Main'
+try:
+    mysql_password = os.environ.get('MYSQL_ROOT_PASSWORD')  # nom de la vriable d'env d'apres le deployment
+    exit()
+except:
+    print("Database Password not setup in Env variable ...") 
+
 
 # recreating the URL connection
 connection_url = 'mysql://{user}:{password}@{url}/{database}'.format(

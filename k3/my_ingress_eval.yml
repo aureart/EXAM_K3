@@ -10,7 +10,7 @@ spec:
         - path: /
           pathType: Prefix
           backend:
-             service:
-              name: my-service-eval
+            service:
+              name: my-service-fastapi
               port: 
                 number: 8000
