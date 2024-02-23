@@ -27,9 +27,9 @@ spec:
         image: filotomic/fastapi-k8:latest
         ports:
         - containerPort: 8000
-        #env:
-         # - name: MYSQL_ROOT_PASSWORD
-         #   valueFrom:
-         #     secretKeyRef:
-         #       name: eval-datascientest-rootpass
-         #       key: password
+        env:
+          - name: MYSQL_ROOT_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: eval-datascientest-rootpass
+                key: password
